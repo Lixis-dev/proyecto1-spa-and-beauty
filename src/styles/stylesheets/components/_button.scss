@@ -1,0 +1,20 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+@use '../abstracts';
+
+.button a{
+    color: abstracts.$color-white;
+    background-color: abstracts.$color-blue ;
+    border-radius: 32px;
+    padding: 16px 40px;
+    
+}
+
+.play a, .play i{
+    transition: color 1s ease;
+    &:hover {
+        opacity: 80%;
+        color: abstracts.$color-cyan;
+    }
+}

@@ -1,0 +1,63 @@
+@use "../abstracts";
+
+/// Aplicación de colores del proyecto
+
+* {
+    color: abstracts.$color-blue;
+}
+
+body{
+    background-image:linear-gradient(90deg,abstracts.$color-background, 
+    abstracts.$color-background 67%, abstracts.$color-cyan 67%);
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y:  -100px;
+    
+    
+    
+}
+.page {
+    
+    background-image: url("/img/woman.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-size:74%;
+    background-position-x: 460px;
+    background-position-y: -48px; 
+    z-index:1;
+}
+
+main::before {
+    content: "";
+    position: absolute;
+    background-image: url("/img/flor-fondo.svg");
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 473px;
+    height: 437px;
+    opacity: 10%;
+    top:80px;
+    right: 220px;
+    z-index: -1;
+}
+
+/// Main
+.hero__p, .info_article-p{
+    color: abstracts.$color-gray;
+}
+
+
+.hero__nav i{
+    box-shadow: -4px -4px 26px 5px rgba(0,0,0, 0.15);
+}
+
+.info i{
+    background-color: abstracts.$color-cyan;
+}
+
+.hero_contenedor_article{
+    background-color: abstracts.$color-white;
+}
+
+

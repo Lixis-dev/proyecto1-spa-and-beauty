@@ -1,0 +1,79 @@
+@use "../abstracts";
+main {
+  margin-left: auto;
+  margin-bottom: auto;
+  padding: 0 160px;
+}
+.page {
+  padding-bottom: 70px;
+}
+.hero_contenedor {
+  margin-top: 52px;
+  max-width: 48%;
+  @include abstracts.flex-just-aling2(0);
+  flex-direction: column;
+  transform: translateX(-50px);
+    animation: entradaLateralder 1.5s ease-out forwards;
+
+  .hero__nav ul {
+    @include abstracts.flex-just-aling2(32px);
+    margin: 56px 0 90px;
+    
+    i {
+      margin-right: 16px;
+    }
+  }
+}
+
+.hero_contenedor_article {
+  width: 643px;
+  padding: 32px;
+  border-radius: 16px;
+
+  @include abstracts.flex-just-aling1(1rem, space-around);
+  .info_article {
+    @include abstracts.flex-just-aling1();
+    flex: 1;
+
+    flex-direction: column;
+    p {
+      width: 80%;
+      text-align: center;
+    }
+  }
+}
+.hero_contenedor-div {
+  width: 355px;
+  height: 200px;
+  display: block;
+  position: absolute;
+
+  p {
+    padding: 8px 0;
+  }
+  opacity: 0;
+  transform: translateX(50px);
+  animation: entradaLateralizq 1.5s ease-out forwards;
+}
+.hero_contenedor-div::before {
+  display: block;
+  background-color: white;
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 235px;
+  opacity: 50%;
+  z-index: -1;
+  border-radius: 16px;
+
+  margin: -20px;
+}
+.hero_contenedor-div:first-of-type {
+  right: 80px;
+  bottom: 350px;
+}
+.hero_contenedor-div:last-of-type {
+  right: 220px;
+  bottom: 50px;
+  z-index: 0;
+}

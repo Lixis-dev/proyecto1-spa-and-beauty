@@ -1,0 +1,69 @@
+@use '../abstracts';
+
+/**
+ * Basic typography style for copy text
+ */
+body {
+  color: abstracts.$text-color;
+  font: normal 125% / 1.4 abstracts.$text-font-stack;
+}
+
+* {
+  font-family: abstracts.$font-poppins;
+  @include abstracts.tipography
+}
+
+/* tipografía header */
+
+.desplegable button, .desplegable a{ 
+      font-family: abstracts.$font-nunito;
+      text-transform: capitalize;
+    }
+.header_aside-sing li:first-of-type a{
+      font-family: abstracts.$font-nunito;
+      text-decoration: underline;
+}
+a {
+  text-transform: capitalize;
+}
+
+/* tipografía main*/
+
+.hero__title{
+  @include abstracts.tipography(64px, 700);
+  line-height: 80px;
+}
+.hero__p{
+  @include abstracts.tipography(24px);
+  line-height: 40px;
+}
+.info_article-h2 {
+  @include abstracts.tipography(36px, 500)
+}
+.comentaries_article-h3{
+  @include abstracts.tipography(18px, 700)
+}
+.icon-chevron{
+  font-size: 12px;
+  font-weight: 900;
+}
+.header_aside-i i{
+  font-size: 32px;
+}
+
+.info_article i{
+  font-size: 56px;
+}
+.icon-comilla{
+  font-size: 20px;
+}
+.hero__nav i{
+    border-radius: 50%;
+    padding: 8px;
+    font-size: 24px;
+}
+.info i{
+  border-radius: 50%;
+  padding: 5px;
+}
+
