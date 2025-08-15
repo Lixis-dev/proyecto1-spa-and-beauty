@@ -41,19 +41,3 @@
   font-size: $fsize;
   font-weight: $fweight;  
 }
-
-/// display flex 
-@mixin flex-just-aling1 ($gap: 1rem, $just:space-between, $aling: center) {
-  display:flex;
-  justify-content: $just;
-  align-items: $aling;
-  gap: $gap;
-  flex-wrap: wrap;
-}
-@mixin flex-just-aling2 ($gap: 1rem, $just:flex-start, $aling: left) {
-  display:flex;
-  justify-content: $just;
-  align-items: $aling;
-  gap: $gap;
-  flex-wrap: wrap;
-}

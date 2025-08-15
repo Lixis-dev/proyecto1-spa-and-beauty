@@ -33,11 +33,6 @@ a {
 
   @include abstracts.on-event {
     opacity: 50%;
+    
   }
-}
-
-.page {
-  margin-left: auto;
-  margin-right: auto;
-  box-sizing: border-box;
 }

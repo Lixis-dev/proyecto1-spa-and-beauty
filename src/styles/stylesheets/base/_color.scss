@@ -1,63 +1,92 @@
 @use "../abstracts";
 
-/// Aplicación de colores del proyecto
+// fondos de imagen
+.page {
+  box-sizing: border-box;
+  background: linear-gradient(
+    90deg,
+    abstracts.$color-background,
+    abstracts.$color-background 67%,
+    abstracts.$color-cyan 67%
+  );
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: -240px;
+  position: relative;
+  z-index: 1;
+}
+.page::before {
+  background-image: url(/img/flor-fondo.svg);
+  background-repeat: no-repeat;
+  background-size: 400px;
+  content: "";
+  width: 100%;
+  height: 90%;
+  left: 1230px;
+  top: 90px;
+  position: absolute;
+  z-index: -1;
+  opacity: 0.1;
+}
+
+.main {
+  background-image: url(/img/woman.png);
+  background-repeat: no-repeat;
+  background-size: 1450px;
+  background-position-x: 250px;
+  background-position-y: bottom;
+  z-index: 10;
+  &__contenido__info {
+    background-color: abstracts.$color-white;
+    i {
+      background-color: abstracts.$color-cyan;
+    }
+  }
+  &__contenido__coment__art {
+    border-radius: 16px;
+    z-index: 1;
+  }
+
+  .uno::before {
+    background-color: abstracts.$color-white;
+    position: absolute;
+    border-radius: 16px;
+    right: 0;
+    bottom: 305px;
+
+    width: 74%;
+    height: 29%;
+    content: "";
+    opacity: 0.6;
+    z-index: -1;
+  }
+  .dos::before {
+    background-color: abstracts.$color-white;
+    position: absolute;
+    border-radius: 16px;
+    left: 0;
+    bottom: 0;
+
+    width: 74%;
+    height: 29%;
+    content: "";
+    opacity: 0.6;
+    z-index: -1;
+  }
+}
+
+// color tipografía
 
 * {
-    color: abstracts.$color-blue;
+  color: abstracts.$color-blue;
 }
 
-body{
-    background-image:linear-gradient(90deg,abstracts.$color-background, 
-    abstracts.$color-background 67%, abstracts.$color-cyan 67%);
-    background-repeat: no-repeat;
-    background-position-x: right;
-    background-position-y:  -100px;
-    
-    
-    
-}
-.page {
-    
-    background-image: url("/img/woman.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-size:74%;
-    background-position-x: 460px;
-    background-position-y: -48px; 
-    z-index:1;
+.main__contenido__hero-subtitle,
+.main__contenido__info__art-subtitle,
+.main__contenido__info__art-subtitle span {
+  color: abstracts.$color-gray;
 }
 
-main::before {
-    content: "";
-    position: absolute;
-    background-image: url("/img/flor-fondo.svg");
-    
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 473px;
-    height: 437px;
-    opacity: 10%;
-    top:80px;
-    right: 220px;
-    z-index: -1;
+.main__contenido__coment__art p {
+  color: abstracts.$color-black;
 }
-
-/// Main
-.hero__p, .info_article-p{
-    color: abstracts.$color-gray;
-}
-
-
-.hero__nav i{
-    box-shadow: -4px -4px 26px 5px rgba(0,0,0, 0.15);
-}
-
-.info i{
-    background-color: abstracts.$color-cyan;
-}
-
-.hero_contenedor_article{
-    background-color: abstracts.$color-white;
-}
-
-

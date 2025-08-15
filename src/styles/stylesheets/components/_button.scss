@@ -10,11 +10,15 @@
     padding: 16px 40px;
     
 }
-
 .play a, .play i{
+    
     transition: color 1s ease;
     &:hover {
         opacity: 80%;
         color: abstracts.$color-cyan;
     }
+}
+.play i{
+    box-shadow: -4px -4px 26px 5px rgba(0,0,0, 0.15);
+    margin-right: 1rem;
 }

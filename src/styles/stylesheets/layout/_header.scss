@@ -3,40 +3,54 @@
 // -----------------------------------------------------------------------------
 @use "../abstracts";
 
-.contenedor_header {
-  margin: 33px 160px;
-  @include abstracts.flex-just-aling1();
-  .header_menu ul {
-    @include abstracts.flex-just-aling1(56px, space-between, baseline);
-  }
-  .header_aside {
-    @include abstracts.flex-just-aling1(74px);
-
-    .header_aside-i ul {
-      @include abstracts.flex-just-aling1(32px);
+// diseño del header
+.header {
+  padding-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  &__nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    img {
+      width: 212px;
     }
-    .header_aside-sing ul {
-      @include abstracts.flex-just-aling1(32px);
+    ul {
+      display: flex;
+    }
+    &__menu {
+      gap: 56px;
+    }
+    &__search-bag {
+      gap: 32px;
+    }
+    &__sign {
+      gap: 32px;
+    }
+    &__div {
+      display: flex;
+      gap: 66px;
     }
   }
 }
 
+//diseño del desplegable
 .desplegable {
   overflow: hidden;
+  &__button {
+    border: none;
+    background-color: transparent;
+  }
 }
 .desplegable-div {
   display: none;
   position: absolute;
-  
+
   a {
-    
     display: block;
   }
 }
 .desplegable:hover .desplegable-div {
   display: block;
-}
-
-.desplegable-div{
-  
 }
